@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836068faf1075224997f1acc0b750d67, type: 3}
+  m_Name: JannaW
+  m_EditorClassIdentifier: 
+  skill_Name: "\uC11C\uD48D"
+  skill_Type: Damage&Debuff
+  skill_MaxLevel: 5
+  skill_Icon: {fileID: 21300000, guid: 1e16b70bd6523554e8bf652f0f31e2b0, type: 3}
+  skill_Description: "\uC2A4\uD0AC\uC744 \uD65C\uC131\uD654\uD560 \uACBD\uC6B0 \uC801\uC5D0\uAC8C
+    \uD53C\uD574\uB97C \uC785\uD788\uACE0 2\uCD08\uB3D9\uC548 \uC774\uB3D9 \uC18D\uB3C4\uB97C
+    \uB2A6\uCD9C \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  skill_AddDescription: "\uD604\uC7AC \uB370\uBBF8\uC9C0 : {0}\n\uD604\uC7AC \uB514\uBC84\uD504
+    \uC218\uCE58 : {1}"
+  skill_UpDescription: "\uB9C8\uB098 : {0} -> {1} / \uCFE8\uD0C0\uC784 : {2} -> {3}\n\uB370\uBBF8\uC9C0
+    : {4} -> {5} / \uB514\uBC84\uD504 \uC218\uCE58 : {6} - > {7}"
+  skill_originMana: 40
+  skill_levelMana: 10
+  skill_CoolDownTime: 8.5
+  skill_levelCoolDownTime: 0.5
+  skill_Scale: 0
+  skill_damageCoefficient: 0.5
+  skill_damage: 20
+  skill_leveldamage: 35
+  skill_DebuffTime: 2
+  skill_DebuffDamage: 0
+  skill_DebuffAmount: 16
+  skill_DebuffCoeffcient: 0.06
+  skill_levelDebuffDamage: 0
+  skill_levelDebuffAmount: 4
+  skill_levelDebuffTime: 0
+  skill_CCTime: 0
+  skill_levelCCTime: 0

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127512a6d3a686743abc6e7b2c81c561, type: 3}
+  m_Name: LuxP
+  m_EditorClassIdentifier: 
+  skill_Name: "\uAD11\uCC44"
+  skill_Type: DamageSkill
+  skill_MaxLevel: 0
+  skill_Icon: {fileID: 21300000, guid: dc3f6d260440d5747bc3464a2c94d521, type: 3}
+  skill_Description: "\uB7ED\uC2A4\uC758 \uACF5\uACA9 \uC2A4\uD0AC\uC740 6\uCD08
+    \uB3D9\uC548 \uC801\uC744 \uBE5B\uC758 \uC5D0\uB108\uC9C0\uB85C \uAC00\uB4DD
+    \uCC44\uC6C1\uB2C8\uB2E4. \uB7ED\uC2A4\uC758 \uAE30\uBCF8 \uACF5\uACA9\uC73C\uB85C
+    \uC774 \uC5D0\uB108\uC9C0\uB97C \uBD88\uD0DC\uC6B0\uBA74 \uC801\uC740 \uB7ED\uC2A4\uC758
+    \uB808\uBCA8\uC5D0 \uBE44\uB840\uD558\uB294 \uCD94\uAC00 \uB9C8\uBC95 \uD53C\uD574\uB97C
+    \uBC1B\uC2B5\uB2C8\uB2E4."
+  skill_AddDescription: "\uD604\uC81C \uB370\uBBF8\uC9C0 : {0}"
+  skill_originMana: 0
+  skill_levelMana: 0
+  skill_CoolDownTime: 0
+  skill_levelCoolDownTime: 0
+  skill_Scale: 0
+  skill_damageCoefficient: 0.2
+  skill_damage: 10
+  skill_leveldamage: 10

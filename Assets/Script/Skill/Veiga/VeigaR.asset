@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127512a6d3a686743abc6e7b2c81c561, type: 3}
+  m_Name: VeigaR
+  m_EditorClassIdentifier: 
+  skill_Name: "\uD0DC\uCD08\uC758 \uD3ED\uBC1C"
+  skill_Type: DmageSkill
+  skill_MaxLevel: 3
+  skill_Icon: {fileID: 21300000, guid: 71b5785ca378e6445a5772bece268cc3, type: 3}
+  skill_Description: "\uC801 \uCC54\uD53C\uC5B8\uC744 \uB9DE\uCDB0 \uB9E4\uC6B0 \uD070
+    \uB9C8\uBC95 \uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4. \uD53C\uD574\uB7C9\uC740
+    \uB300\uC0C1\uC758 \uC783\uC740 \uCCB4\uB825\uC5D0 \uBE44\uB840\uD574 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  skill_AddDescription: "\uD604\uC7AC \uB370\uBBF8\uC9C0 : {0}\n\uCD5C\uB300\uCCB4\uB825\uC774
+    33% \uBBF8\uB9CC\uC778\uC801\uC740 2\uBC30\n"
+  skill_UpDescription: "\uB9C8\uB098 : {0} -> {1} / \uCFE8\uD0C0\uC784 : {2} -> {3}\n\uB370\uBBF8\uC9C0
+    : {4} -> {5}"
+  skill_originMana: 100
+  skill_levelMana: 0
+  skill_CoolDownTime: 140
+  skill_levelCoolDownTime: 20
+  skill_Scale: 0
+  skill_damageCoefficient: 0.75
+  skill_damage: 100
+  skill_leveldamage: 75

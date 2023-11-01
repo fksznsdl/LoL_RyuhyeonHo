@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6999090253c1a41b8bea09a18f9ba5, type: 3}
+  m_Name: JannaQ
+  m_EditorClassIdentifier: 
+  skill_Name: "\uC6B8\uBD80\uC9D6\uB294 \uB3CC\uD48D"
+  skill_Type: TwoTouchSecSkill
+  skill_MaxLevel: 5
+  skill_Icon: {fileID: 21300000, guid: 5700243a0b24aa644ba75511cbc834a5, type: 3}
+  skill_Description: "\uC794\uB098\uAC00 \uAE30\uC555\uACFC \uC628\uB3C4\uB97C \uAD6D\uC9C0\uC801\uC73C\uB85C
+    \uBCC0\uACBD\uD558\uC5EC \uC2DC\uAC04\uC774 \uC9C0\uB098\uBA74 \uC810\uC810 \uCEE4\uC9C0\uB294
+    \uC791\uC740 \uD3ED\uD48D\uC744 \uC0DD\uC131\uD569\uB2C8\uB2E4. \uC2A4\uD0AC\uC744
+    \uB2E4\uC2DC \uC0AC\uC6A9\uD558\uBA74 \uD3ED\uD48D\uC744 \uB0A0\uB824\uBCF4\uB0BC
+    \uC218 \uC788\uC2B5\uB2C8\uB2E4. \uD3ED\uD48D\uC740 \uC2A4\uD0AC\uC744 \uC0AC\uC6A9\uD55C
+    \uBC29\uD5A5\uC73C\uB85C \uB0A0\uC544\uAC00\uBA70, \uACBD\uB85C\uC5D0 \uC788\uB294
+    \uC801\uB4E4\uC5D0\uAC8C \uD53C\uD574\uB97C \uC785\uD788\uACE0 \uACF5\uC911\uC73C\uB85C
+    \uB744\uC6CC \uC62C\uB9BD\uB2C8\uB2E4."
+  skill_AddDescription: "\uD604\uC7AC \uB370\uBBF8\uC9C0 : {0}\n\uCD5C\uB300 \uD06C\uAE30
+    \uB370\uBBF8\uC9C0 : {1}\nCC \uC2DC\uAC04/\uCD08\uB2F9\uC99D\uAC00 \uC2DC\uAC04
+    : {2}/{3}"
+  skill_UpDescription: "\uB9C8\uB098 : {0} -> {1} / \uCFE8\uD0C0\uC784 : {2} -> {3}\n\uB370\uBBF8\uC9C0
+    : {4} -> {5}\n"
+  skill_originMana: 50
+  skill_levelMana: 10
+  skill_CoolDownTime: 12
+  skill_levelCoolDownTime: 0
+  skill_Scale: 0
+  skill_damageCoefficient: 0.35
+  skill_damage: 35
+  skill_leveldamage: 25
+  skill_DebuffTime: 0
+  skill_DebuffDamage: 0
+  skill_DebuffAmount: 0
+  skill_DebuffCoeffcient: 0
+  skill_levelDebuffDamage: 0
+  skill_levelDebuffAmount: 0
+  skill_levelDebuffTime: 0
+  skill_CCTime: 0.5
+  skill_levelCCTime: 0.25
+  skill_TwoTouchDamage: 65
+  skill_levelTowTouchDamage: 40
+  skill_TwoTouchCoefficient: 0.65

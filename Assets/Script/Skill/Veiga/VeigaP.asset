@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c194d84d0fd15b4b9bb7670eef63fbd, type: 3}
+  m_Name: VeigaP
+  m_EditorClassIdentifier: 
+  skill_Name: "\uADF9\uC545\uBB34\uB3C4"
+  skill_Type: PassiveSkill
+  skill_MaxLevel: 0
+  skill_Icon: {fileID: 21300000, guid: 0100db03b1d947548bd000dabb4150bd, type: 3}
+  skill_Description: "\uB8EC\uD14C\uB77C\uC5D0\uC11C \uAC00\uC7A5 \uAC15\uB825\uD55C
+    \uC545\uC758 \uC6D0\uCC9C\uC778 \uBCA0\uC774\uAC00\uB294 \uC810\uC810 \uB354
+    \uAC15\uD574\uC9C0\uACE0 \uC788\uC2B5\uB2C8\uB2E4. \uC801 \uCC54\uD53C\uC5B8\uC5D0\uAC8C
+    \uC2A4\uD0AC\uC744 \uC801\uC911\uC2DC\uCF30\uC744\uB54C \uC8FC\uBB38\uB825\uC774
+    \uC601\uAD6C\uC801\uC73C\uB85C \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  skill_AddDescription: 
+  skill_originMana: 0
+  skill_levelMana: 0
+  skill_CoolDownTime: 0
+  skill_levelCoolDownTime: 0
+  skill_Scale: 0

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76611627e56ebd49906f96b8c5726f5, type: 3}
+  m_Name: Gromp
+  m_EditorClassIdentifier: 
+  chName: Gromp
+  hp: 2100
+  hpperlevel: 75
+  mp: 0
+  mpperlevel: 0
+  movespeed: 330
+  armor: 0
+  armorperlevel: 0
+  spellblock: 0
+  spellblockperlevel: 0
+  attackrange: 250
+  hpregen: 0
+  hpregenperlevel: 0
+  mpregen: 0
+  mpregenperlevel: 0
+  crit: 0
+  critperlevel: 0
+  attackdamage: 74
+  attackdamageperlevel: 8.2
+  attackspeed: 1
+  attackspeedperlevel: 0
+  spell: 0
+  team: 3
+  killgold: 80
+  killExp: 120
+  killExpperlevel: 3
+  sightRange: 600

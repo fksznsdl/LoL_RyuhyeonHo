@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76611627e56ebd49906f96b8c5726f5, type: 3}
+  m_Name: Dragon
+  m_EditorClassIdentifier: 
+  chName: Dragon
+  hp: 3500
+  hpperlevel: 240
+  mp: 0
+  mpperlevel: 0
+  movespeed: 330
+  armor: 21
+  armorperlevel: 13
+  spellblock: 30
+  spellblockperlevel: 5.85
+  attackrange: 500
+  hpregen: 0
+  hpregenperlevel: 0
+  mpregen: 0
+  mpregenperlevel: 0
+  crit: 0
+  critperlevel: 0
+  attackdamage: 100
+  attackdamageperlevel: 0
+  attackspeed: 0.5
+  attackspeedperlevel: 0
+  spell: 0
+  team: 3
+  killgold: 300
+  killExp: 75
+  killExpperlevel: 12.5
+  sightRange: 700

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1fc2e594846e14cbbf3219d686f43b, type: 3}
+  m_Name: JannaE
+  m_EditorClassIdentifier: 
+  skill_Name: "\uD3ED\uD48D\uC758 \uB208"
+  skill_Type: Barrier&Buff
+  skill_MaxLevel: 5
+  skill_Icon: {fileID: 21300000, guid: d2d44de6999286a4a86f5d589303cbca, type: 3}
+  skill_Description: "\uC794\uB098\uAC00 \uBC29\uC5B4\uC6A9 \uAD11\uD48D\uC744 \uB9CC\uB4E4\uC5B4
+    \uC544\uAD70 \uCC54\uD53C\uC5B8\uC774\uB098 \uD3EC\uD0D1\uC744 \uACF5\uACA9\uC5D0\uC11C
+    \uBCF4\uD638\uD558\uACE0 \uACF5\uACA9\uB825\uC744 \uB192\uC5EC\uC90D\uB2C8\uB2E4.
+    \uC9C0\uC18D\uC2DC\uAC04\uC7741.5\uCD08\uB0A8\uC558\uC744\uB54C\uBD80\uD130 \uC11C\uC11C\uD788
+    \uBCF4\uD638\uB9C9\uC774\uAC10\uC18C\uB429\uB2C8\uB2E4."
+  skill_AddDescription: "\uD604\uC7AC \uBCF4\uD638\uB9C9 : {0}\n\uD604\uC7AC \uACF5\uACA9\uB825
+    \uC99D\uAC00\uB7C9 : {1}\n\uC9C0\uC18D \uC2DC\uAC04 : {2}"
+  skill_UpDescription: "\uB9C8\uB098 : {0} -> {1} / \uCFE8\uD0C0\uC784 : {2} -> {3}\n\uBCF4\uD638\uB9C9
+    : {4} -> {5} / \uACF5\uACA9\uB825 \uC99D\uAC00\uB7C9 : {6} -> {7}"
+  skill_originMana: 60
+  skill_levelMana: 10
+  skill_CoolDownTime: 17
+  skill_levelCoolDownTime: 1
+  skill_Scale: 0
+  skill_BuffTime: 4
+  skill_levelBuffTime: 0
+  skill_BuffAmount: 5
+  skill_Buffcoefficient: 0.1
+  skill_levelBuffAmount: 5
+  skill_levelBuffcoefficient: 0
+  skill_BarrierAmount: 50
+  skill_levelBarrierAmount: 25
+  skill_BarrierCoefficient: 0.55
+  skill_BarrierTime: 4
+  skill_levelBarrierTime: 0

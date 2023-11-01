@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2ae94cd2a10d1479a63488ef7a2bbe, type: 3}
+  m_Name: LuxW
+  m_EditorClassIdentifier: 
+  skill_Name: "\uD504\uB9AC\uC998 \uBCF4\uD638\uB9C9"
+  skill_Type: ProtectSkill
+  skill_MaxLevel: 5
+  skill_Icon: {fileID: 21300000, guid: c9eebfdd80d280247b05afd43a3a9dab, type: 3}
+  skill_Description: "\uB7ED\uC2A4\uAC00 \uB9C8\uBC95\uBD09\uC744 \uB358\uC838 \uC544\uAD70
+    \uC8FC\uBCC0\uC758 \uBE5B\uC744 \uAD6C\uBD80\uB9AC\uBA70 \uC801\uC758 \uACF5\uACA9\uC73C\uB85C\uBD80\uD130
+    \uBCF4\uD638\uD574\uC90D\uB2C8\uB2E4."
+  skill_AddDescription: "\uD604\uC7AC \uBCF4\uD638\uB9C9 : {0}\n\uC9C0\uC18D \uC2DC\uAC04
+    : {1}"
+  skill_UpDescription: "\uB9C8\uB098 : {0} -> {1} / \uCFE8\uD0C0\uC784 : {2} -> {3}\n\uBCF4\uD638\uB9C9 
+    : {4} -> {5} / \uC9C0\uC18D \uC2DC\uAC04 {6} -> {7}"
+  skill_originMana: 55
+  skill_levelMana: 5
+  skill_CoolDownTime: 15
+  skill_levelCoolDownTime: 1
+  skill_Scale: 0
+  skill_BuffTime: 2.5
+  skill_levelBuffTime: 0
+  skill_BuffAmount: 25
+  skill_Buffcoefficient: 0.35
+  skill_levelBuffAmount: 25
+  skill_levelBuffcoefficient: 0

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2268247b1001f2d4f801c3daf55259c2, type: 3}
+  m_Name: LastWisper
+  m_EditorClassIdentifier: 
+  item_Name: LastWisper
+  Icon: {fileID: 21300000, guid: db97ced8a230502419534b6028941e95, type: 3}
+  item_Type: Normal
+  item_Rank: Epic
+  gold: 1450
+  hp: 0
+  mp: 0
+  ap: 0
+  ad: 20
+  hpregen: 0
+  mpregen: 0
+  armor: 0
+  spellblock: 0
+  ADperPenetration: 18
+  ADpenetration: 0
+  APperPenetration: 0
+  APpenetration: 0
+  attackspeedPer: 0
+  moveSpeedPer: 0
+  moveSpeed: 0
+  crit: 0
+  critDamage: 0
+  description: "\uACF5\uACA9\uB825 : 20\n\uBC29\uC5B4\uAD6C \uAD00\uD1B5\uB825 :
+    18%"
+  underitem:
+  - {fileID: 11400000, guid: e162aaab2a966004a8b32e52997cc109, type: 2}
+  - {fileID: 11400000, guid: e162aaab2a966004a8b32e52997cc109, type: 2}

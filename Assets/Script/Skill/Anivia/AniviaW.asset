@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6539fc33de93ed742afd402f3017612f, type: 3}
+  m_Name: AniviaW
+  m_EditorClassIdentifier: 
+  skill_Name: "\uACB0\uC815\uD654"
+  skill_Type: InstallSkill
+  skill_MaxLevel: 5
+  skill_Icon: {fileID: 21300000, guid: f756f6ab5cd286a44ad22209866b6fa6, type: 3}
+  skill_Description: "\uC560\uB2C8\uBE44\uC544\uAC00 \uACF5\uAE30 \uC911\uC758 \uC218\uBD84\uC744
+    \uBE59\uACB0\uC2DC\uCF1C \uC9C0\uB098\uAC08 \uC218 \uC5C6\uB294 \uC5BC\uC74C
+    \uBCBD\uC744 \uB9CC\uB4ED\uB2C8\uB2E4. \uBCBD\uC740 \uC5BC\uB9C8 \uC9C0\uB098\uC9C0
+    \uC54A\uC544 \uB179\uC544\uBC84\uB9BD\uB2C8\uB2E4."
+  skill_originMana: 70
+  skill_levelMana: 0
+  skill_CoolDownTime: 17
+  skill_levelCoolDownTime: 0
+  skill_Scale: 0
+  skill_InstallScale: 300
+  skill_levelInstallScale: 100

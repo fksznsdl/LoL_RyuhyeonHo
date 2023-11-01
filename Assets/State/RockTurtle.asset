@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76611627e56ebd49906f96b8c5726f5, type: 3}
+  m_Name: RockTurtle
+  m_EditorClassIdentifier: 
+  chName: RockTurtle
+  hp: 1550
+  hpperlevel: 62
+  mp: 0
+  mpperlevel: 0
+  movespeed: 250
+  armor: 20
+  armorperlevel: 0
+  spellblock: 20
+  spellblockperlevel: 0
+  attackrange: 150
+  hpregen: 0
+  hpregenperlevel: 0
+  mpregen: 0
+  mpregenperlevel: 0
+  crit: 0
+  critperlevel: 0
+  attackdamage: 94
+  attackdamageperlevel: 15
+  attackspeed: 0.61
+  attackspeedperlevel: 0
+  spell: 0
+  team: 3
+  killgold: 62
+  killExp: 25
+  killExpperlevel: 0.625
+  sightRange: 600
