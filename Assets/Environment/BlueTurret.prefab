@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4778409788064682025}
   - component: {fileID: 6167714424135540032}
   - component: {fileID: 8930192895512112968}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueTurret
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -238,6 +238,7 @@ MonoBehaviour:
   wallCheck: {fileID: 0}
   anim: {fileID: 0}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0
@@ -678,6 +679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoundTarget
       objectReference: {fileID: 0}
+    - target: {fileID: 5528434774583185348, guid: 9b11f58a8d08660448cc76a57a7c1283, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8521635445219407769, guid: 9b11f58a8d08660448cc76a57a7c1283, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -739,6 +744,14 @@ PrefabInstance:
     - target: {fileID: 7153455041671669477, guid: c0fb03ee76d2a0e43969215112b0221b, type: 3}
       propertyPath: m_RootOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153455041671669477, guid: c0fb03ee76d2a0e43969215112b0221b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153455041671669477, guid: c0fb03ee76d2a0e43969215112b0221b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7153455041671669477, guid: c0fb03ee76d2a0e43969215112b0221b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -850,6 +863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SearchTargetZone
       objectReference: {fileID: 0}
+    - target: {fileID: 8750085613313027448, guid: 602bfa05497e7d943a2de94f539efe83, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -943,6 +960,10 @@ PrefabInstance:
     - target: {fileID: 8002554999333245522, guid: 5d3939406e9442a43bb85017c81fa3eb, type: 3}
       propertyPath: m_Name
       value: CheckZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002554999333245522, guid: 5d3939406e9442a43bb85017c81fa3eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1933360903999388884}
   - component: {fileID: -6579717417220456957}
   - component: {fileID: -6998081091205622077}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: AniviaW
   m_TagString: Environment
   m_Icon: {fileID: 0}

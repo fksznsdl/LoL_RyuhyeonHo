@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8288873161724325344}
   - component: {fileID: 4401267859446766408}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NonTargetRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4155403526313795301}
   - component: {fileID: 5095933380009046853}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rangeSkil
   m_TagString: Blue
   m_Icon: {fileID: 0}

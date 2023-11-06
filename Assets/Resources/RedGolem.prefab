@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 2729197320144642198}
   - component: {fileID: -2889103510815409993}
   - component: {fileID: -2059449367023421969}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RedGolem
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -1284,6 +1284,7 @@ MonoBehaviour:
   wallCheck: {fileID: 192308303284744592}
   anim: {fileID: 4624939532603964809}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

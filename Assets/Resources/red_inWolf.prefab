@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: -1951257504303899377}
   - component: {fileID: -395514267489526926}
   - component: {fileID: 2762075827437440123}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: red_inWolf
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -793,6 +793,7 @@ MonoBehaviour:
   wallCheck: {fileID: 4491096853277287016}
   anim: {fileID: 8387281511696176450}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

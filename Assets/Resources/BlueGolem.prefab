@@ -973,7 +973,7 @@ GameObject:
   - component: {fileID: 4028087562804360471}
   - component: {fileID: 1452216277760972302}
   - component: {fileID: 64545798714100820}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueGolem
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -1106,6 +1106,7 @@ MonoBehaviour:
   wallCheck: {fileID: 3324004448730178388}
   anim: {fileID: 7127038725697101595}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

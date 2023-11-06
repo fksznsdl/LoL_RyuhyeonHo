@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 7217777901600847474}
   - component: {fileID: -8826413643197955970}
   - component: {fileID: -7640018508831692311}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RedMinion_Warrior_mid
   m_TagString: Minion
   m_Icon: {fileID: 0}
@@ -677,13 +677,18 @@ MonoBehaviour:
   status: {fileID: 0}
   anim: {fileID: 420693296496373855}
   chTransform: {fileID: 1620225609154232989}
-  sightRange: 350
+  sightRange: 300
   sightObject: {fileID: 7277190798122493751}
   attackEffect: 
   target: {fileID: 0}
   destination:
-  - {x: 84, y: 0, z: 84}
-  - {x: 12, y: 0, z: 12}
+  - {x: 164, y: 0, z: 164}
+  - {x: 144, y: 0, z: 146}
+  - {x: 122, y: 0, z: 114}
+  - {x: 83, y: 0, z: 88}
+  - {x: 70, y: 0, z: 58}
+  - {x: 42, y: 0, z: 42}
+  - {x: 15, y: 0, z: 15}
 --- !u!195 &8847394612719323225
 NavMeshAgent:
   m_ObjectHideFlags: 0

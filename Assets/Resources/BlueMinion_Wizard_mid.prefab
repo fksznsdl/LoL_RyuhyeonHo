@@ -2348,7 +2348,7 @@ GameObject:
   - component: {fileID: 958568133012983138}
   - component: {fileID: 1157286489354790893}
   - component: {fileID: -6783833607258467805}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueMinion_Wizard_mid
   m_TagString: Minion
   m_Icon: {fileID: 0}
@@ -2507,8 +2507,13 @@ MonoBehaviour:
   attackEffect: BlueWizardAttack
   target: {fileID: 0}
   destination:
-  - {x: 123, y: 0, z: 118}
-  - {x: 198, y: 0, z: 198}
+  - {x: 45, y: 0, z: 45}
+  - {x: 70, y: 0, z: 58}
+  - {x: 85, y: 0, z: 90}
+  - {x: 122, y: 0, z: 115}
+  - {x: 145, y: 0, z: 148}
+  - {x: 165, y: 0, z: 164}
+  - {x: 195, y: 0, z: 195}
 --- !u!195 &2654705377288848187
 NavMeshAgent:
   m_ObjectHideFlags: 0

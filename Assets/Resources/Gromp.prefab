@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3050851376101817037}
   - component: {fileID: 890401226342757905}
   - component: {fileID: 3250721003436252989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gromp
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -131,6 +131,7 @@ MonoBehaviour:
   wallCheck: {fileID: 5601069581506472936}
   anim: {fileID: 6284906443414137497}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

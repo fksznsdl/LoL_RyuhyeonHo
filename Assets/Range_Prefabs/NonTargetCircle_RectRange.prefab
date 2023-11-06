@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2753951569287605788}
   - component: {fileID: 630773797463952350}
   - component: {fileID: 2227952810876390108}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NonTargetCircle_RectRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

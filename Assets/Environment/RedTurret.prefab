@@ -678,7 +678,7 @@ GameObject:
   - component: {fileID: 6506540968773771082}
   - component: {fileID: 1829778599638374507}
   - component: {fileID: 262978519980112610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RedTurret
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -795,6 +795,7 @@ MonoBehaviour:
   wallCheck: {fileID: 0}
   anim: {fileID: 0}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0
@@ -1018,6 +1019,14 @@ PrefabInstance:
     - target: {fileID: 7153455041671669477, guid: c0fb03ee76d2a0e43969215112b0221b, type: 3}
       propertyPath: m_RootOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153455041671669477, guid: c0fb03ee76d2a0e43969215112b0221b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153455041671669477, guid: c0fb03ee76d2a0e43969215112b0221b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7153455041671669477, guid: c0fb03ee76d2a0e43969215112b0221b, type: 3}
       propertyPath: m_LocalPosition.x

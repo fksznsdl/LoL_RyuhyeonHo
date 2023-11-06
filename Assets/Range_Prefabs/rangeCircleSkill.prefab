@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3077152744226173814}
   - component: {fileID: 1247071263319272582}
   - component: {fileID: 3344992337682937409}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rangeCircleSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

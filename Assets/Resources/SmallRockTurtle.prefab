@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 89756320432016192}
   - component: {fileID: -7699158682608204976}
   - component: {fileID: 1734476097887261715}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallRockTurtle
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -190,6 +190,7 @@ MonoBehaviour:
   wallCheck: {fileID: 8421023871555590655}
   anim: {fileID: 4036647474158999897}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

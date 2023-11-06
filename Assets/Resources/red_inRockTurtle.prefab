@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 7631222982747212844}
   - component: {fileID: 4055119951097745104}
   - component: {fileID: -5023140489969185040}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: red_inRockTurtle
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -234,6 +234,7 @@ MonoBehaviour:
   wallCheck: {fileID: 4888976171787576551}
   anim: {fileID: 8509081962877304267}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: -5726211993975576090}
   - component: {fileID: -7429588394763104459}
   - component: {fileID: -7488314796947948913}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Red_Inhibitor
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -271,6 +271,7 @@ MonoBehaviour:
   wallCheck: {fileID: 0}
   anim: {fileID: 0}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

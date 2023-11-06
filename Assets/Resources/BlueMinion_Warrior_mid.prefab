@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 3019846831349233771}
   - component: {fileID: 8875580459301032530}
   - component: {fileID: 2028451143330301666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueMinion_Warrior_mid
   m_TagString: Minion
   m_Icon: {fileID: 0}
@@ -1580,13 +1580,18 @@ MonoBehaviour:
   status: {fileID: 0}
   anim: {fileID: 3256942338711961684}
   chTransform: {fileID: 7474559426994180025}
-  sightRange: 350
+  sightRange: 300
   sightObject: {fileID: 1809677290388813410}
   attackEffect: 
   target: {fileID: 0}
   destination:
-  - {x: 123, y: 0, z: 118}
-  - {x: 198, y: 0, z: 198}
+  - {x: 45, y: 0, z: 45}
+  - {x: 70, y: 0, z: 58}
+  - {x: 85, y: 0, z: 90}
+  - {x: 122, y: 0, z: 115}
+  - {x: 145, y: 0, z: 148}
+  - {x: 165, y: 0, z: 164}
+  - {x: 195, y: 0, z: 195}
 --- !u!195 &2992251149096530660
 NavMeshAgent:
   m_ObjectHideFlags: 0

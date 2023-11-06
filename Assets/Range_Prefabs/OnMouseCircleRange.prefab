@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736694446614791419}
   - component: {fileID: 6546064752312794371}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: OnMouseCircleRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}

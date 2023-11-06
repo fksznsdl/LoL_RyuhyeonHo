@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8030489764537121162}
   - component: {fileID: 4559436801284604591}
   - component: {fileID: -5216757116289144313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RedNexus
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -58,6 +58,7 @@ MonoBehaviour:
   wallCheck: {fileID: 0}
   anim: {fileID: 0}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

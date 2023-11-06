@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 5232529696457943802}
   - component: {fileID: 1260219178087747837}
   - component: {fileID: 6353854144725378281}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Anivia
   m_TagString: Champion
   m_Icon: {fileID: 0}
@@ -576,6 +576,7 @@ MonoBehaviour:
   isAttack: 0
   isReturn: 0
   isMiniMap: 0
+  currentAttackCoolTime: 0
   currentRange: 0
   currentCircleRange: 0
   currentOnMouseCircleRange: 0

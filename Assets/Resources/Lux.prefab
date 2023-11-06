@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 4351039241751061535}
   - component: {fileID: 2394797672947345395}
   - component: {fileID: 7776117439964602755}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lux
   m_TagString: Champion
   m_Icon: {fileID: 0}
@@ -700,6 +700,7 @@ MonoBehaviour:
   isAttack: 0
   isReturn: 0
   isMiniMap: 0
+  currentAttackCoolTime: 0
   currentRange: 0
   currentCircleRange: 0
   currentOnMouseCircleRange: 0

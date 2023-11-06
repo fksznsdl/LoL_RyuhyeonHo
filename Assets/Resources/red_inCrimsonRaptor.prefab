@@ -1428,7 +1428,7 @@ GameObject:
   - component: {fileID: 3142727779094438956}
   - component: {fileID: 3497907040526784166}
   - component: {fileID: 504376845968130938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: red_inCrimsonRaptor
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -1521,6 +1521,7 @@ MonoBehaviour:
   wallCheck: {fileID: 2372159347432080164}
   anim: {fileID: 6160301308716323409}
   status_UI: {fileID: 0}
+  ccText: {fileID: 0}
   team: 0
   maxHp: 0
   currentHp: 0

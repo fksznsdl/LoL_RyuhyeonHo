@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 7424642032118553114}
   - component: {fileID: 5287475536730547720}
   - component: {fileID: 3600703895790944519}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Janna
   m_TagString: Champion
   m_Icon: {fileID: 0}
@@ -608,6 +608,7 @@ MonoBehaviour:
   isAttack: 0
   isReturn: 0
   isMiniMap: 0
+  currentAttackCoolTime: 0
   currentRange: 0
   currentCircleRange: 0
   currentOnMouseCircleRange: 0
