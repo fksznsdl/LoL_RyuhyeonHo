@@ -405,7 +405,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
             if (barriers[i].barrierTime <= 0f)
             {
                 currentbarrier -= barriers[i].barrier;
-                Debug.Log(barriers[i].barrierName + " " + barriers[i].barrier +" 해체");
+                //Debug.Log(barriers[i].barrierName + " " + barriers[i].barrier +" 해체");
                 barriers.Remove(barriers[i]);
                 i--;
             }
@@ -442,7 +442,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
             chTransform.transform.position = Vector3.Lerp(AirbornePos, originPos, currentTime);
         if (currentTime >= 0.99f && !isEndAirborne)
         {
-            Debug.Log("위");
+            //Debug.Log("위");
             currentTime = 0f;
             isEndAirborne = true;
         }
@@ -450,7 +450,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
         {
             chTransform.transform.position = originPos;
             this.transform.position = new Vector3(originPos.x,0.1f,originPos.z);
-            Debug.Log("아래");
+            //Debug.Log("아래");
             currentAirborneTime = 0f;
             isEndAirborne = false;
             isAirborne = false;
@@ -478,7 +478,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
             debuffs[i].debuffTime -= Time.deltaTime;
             if (debuffs[i].debuffTime <= 0)
             {
-                Debug.Log(debuffs[i].debuffName + " 해체");
+                //Debug.Log(debuffs[i].debuffName + " 해체");
                 if (debuffs[i].debuffType == (int)Debuff.DebuffType.SLOW)
                 {
                     slowPer -= debuffs[i].debuffFigure;
@@ -541,8 +541,8 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
                 {
                     _damage -= barriers[i].barrier;
                     currentbarrier -= barriers[i].barrier;
-                    Debug.Log(this.gameObject.name + " 의hp " + currentbarrier);
-                    Debug.Log(barriers[i].barrierName + "해체");
+                    //Debug.Log(this.gameObject.name + " 의hp " + currentbarrier);
+                    //Debug.Log(barriers[i].barrierName + "해체");
                     barriers.Remove(barriers[i]);
                     i--;
                 }
@@ -560,7 +560,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
             isbeHit = true;
             beHitTarget = _gameObject;
             currentHp -= _damage;
-            Debug.Log(this.gameObject.name + " 의hp " + currentHp);
+            //Debug.Log(this.gameObject.name + " 의hp " + currentHp);
         }
         UpdateHpBar();
         if (currentHp <= 0)
@@ -621,8 +621,8 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
                 {
                     _damage -= barriers[i].barrier;
                     currentbarrier -= barriers[i].barrier;
-                    Debug.Log(this.gameObject.name + " 의hp " + currentbarrier);
-                    Debug.Log(barriers[i].barrierName + "해체");
+                    //Debug.Log(this.gameObject.name + " 의hp " + currentbarrier);
+                    //Debug.Log(barriers[i].barrierName + "해체");
                     barriers.Remove(barriers[i]);
                     i--;
                 }
@@ -791,7 +791,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
         {
             if (pv.IsMine)
             {
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.8f);
                 PhotonNetwork.Destroy(this.gameObject);
             }
         }
@@ -849,7 +849,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
     {
         if (Vector3.Distance(chTransform.position, KnockBackPos) <= 0.1f || isNearWall)
         {
-            Debug.Log("넉백끝");
+
             this.transform.position = this.transform.position;
             wallCheck.gameObject.SetActive(false);
             isNearWall = false;

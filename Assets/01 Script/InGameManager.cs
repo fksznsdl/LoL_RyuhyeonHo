@@ -58,7 +58,7 @@ public class InGameManager : MonoBehaviour, IPunObservable, IOnEventCallback
     public int blueTeamKill;
     public int redTeamKill;
 
-    private bool isMaster;
+    public bool isMaster;
     private bool isComplete;
     private void Awake()
     {

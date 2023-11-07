@@ -12,7 +12,7 @@ public class Minion_AI : MonoBehaviour
     [SerializeField]
     private Animator anim;
     [SerializeField]
-    private Transform chTransform;
+    public Transform chTransform;
     [SerializeField]
     public float sightRange;
     [SerializeField]
@@ -187,11 +187,17 @@ public class Minion_AI : MonoBehaviour
             yield return new WaitForSeconds(currentAnimationTime-0.1f);
             if (status.attackRange > 9f)
             {
-                var clone = PhotonNetwork.Instantiate(attackEffect,chTransform.position,Quaternion.identity);
-                clone.GetComponent<MinionWizard_Attack>().minion = this;
-                if (target == null || target.GetComponent<Status>().isDead) {
-                        PhotonNetwork.Destroy(clone);
+                string team;
+                if(status.team == 2)
+                {
+                    team = "Blue";
                 }
+                else
+                {
+                    team = "Red";
+                }
+                var clone = ObjectPoolManager.GetObject(team);
+                clone.GetComponent<MinionWizard_Attack>().Initialize(this , chTransform.position);
             }
             else
             {
