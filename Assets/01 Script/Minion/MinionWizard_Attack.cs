@@ -142,13 +142,13 @@ public class MinionWizard_Attack : MonoBehaviour,IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting)
+        if (stream.IsWriting) // 이 오브젝트의 소유권이 있고 데이터의 변화가 있을 때 전송
         {
             stream.SendNext(targetPos);
         }
-        else
+        else // 그 외의 소유권이 없는 클라이언트는 데이터 변화가있을 때 데이터를 받음
         {
-            targetPos = (Vector3)stream.ReceiveNext();
+            targetPos = (Vector3)stream.ReceiveNext(); 
         }
     }
 }

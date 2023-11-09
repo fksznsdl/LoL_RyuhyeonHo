@@ -45,12 +45,13 @@ public class NetworkManager : MonoBehaviour,IConnectionCallbacks
         client.AddCallbackTarget(this);
         client.ClientType = ClientAppType.Realtime;
         client.ConnectUsingSettings(new AppSettings() { AppIdRealtime = "d9185cbe-622c-496d-a184-843dd1453698", FixedRegion = "kr" });
+        // 서버 접속
     }
 
     // Update is called once per frame
     void Update()
     {
-        client.Service();
+        client.Service(); // 서버 통신
     }
     private void OnDisable()
     {

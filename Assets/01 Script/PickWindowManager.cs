@@ -215,7 +215,7 @@ public class PickWindowManager : MonoBehaviour,IOnEventCallback
             }
             champPick = _name;
             ExitGames.Client.Photon.Hashtable hash = new ExitGames.Client.Photon.Hashtable();
-            hash["ChampName"] = _name;
+            hash["ChampName"] = _name; // 선택한 챔피언 이름을 보내주는 해시테이블
             RaiseEventOptions raiseEventOptions = new RaiseEventOptions();
             raiseEventOptions.Receivers = ReceiverGroup.All;
             NetworkManager.Instance.Getclient.OpRaiseEvent((byte)EventCodeValues.EventCode.PICK_CHANGE, hash, raiseEventOptions, SendOptions.SendReliable);

@@ -53,7 +53,7 @@ public class QuickMatch : MatchManager
     public void QuickMatchConnect()
     {
         ExitGames.Client.Photon.Hashtable property = new ExitGames.Client.Photon.Hashtable();
-        property["MatchType"] = "Quick";
+        property["MatchType"] = "Quick"; // 룸 속성
 
         OpJoinRandomRoomParams opJoinRandomRoomParams = new OpJoinRandomRoomParams();
         opJoinRandomRoomParams.ExpectedCustomRoomProperties = new ExitGames.Client.Photon.Hashtable();
@@ -72,6 +72,7 @@ public class QuickMatch : MatchManager
          };
         connectPanel.gameObject.SetActive(true);
         NetworkManager.Instance.Getclient.OpJoinRandomOrCreateRoom(opJoinRandomRoomParams, enterRoomParams);
+        // 룸을 생성하거나 룸이 없다면 들어감
     }
     public void QuickMatchDisconnect()
     {

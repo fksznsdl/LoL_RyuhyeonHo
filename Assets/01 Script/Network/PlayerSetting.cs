@@ -23,7 +23,7 @@ public class PlayerSetting : MonoBehaviourPunCallbacks,IConnectionCallbacks
     }
     void JoinRoom()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.ConnectUsingSettings(); // Pun 辑滚 立加
         StartCoroutine(StayCoroutine());
     }
     private IEnumerator StayCoroutine()
@@ -31,12 +31,12 @@ public class PlayerSetting : MonoBehaviourPunCallbacks,IConnectionCallbacks
         yield return new WaitForSeconds(5f);
         if(team == "Blue")
         {
-            PhotonNetwork.CreateRoom("A", new RoomOptions { MaxPlayers = 2 });
+            PhotonNetwork.CreateRoom("A", new RoomOptions { MaxPlayers = 2 }); // 规 积己
         }
         else
         {
             yield return new WaitForSeconds(5f);
-            PhotonNetwork.JoinRoom("A");
+            PhotonNetwork.JoinRoom("A"); // 规 立加
         }
     }
     public override void OnDisable()

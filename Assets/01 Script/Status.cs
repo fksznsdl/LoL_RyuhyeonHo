@@ -853,7 +853,6 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
     {
         if (Vector3.Distance(chTransform.position, KnockBackPos) <= 0.1f || isNearWall)
         {
-
             this.transform.position = this.transform.position;
             wallCheck.gameObject.SetActive(false);
             isNearWall = false;
@@ -862,7 +861,6 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
             KnockBackTime = 0f;
             return;
         }
-        
         KnockBackTime += Time.deltaTime * 2f;
         this.transform.position = Vector3.Lerp(originPos, KnockBackPos, KnockBackTime);
     }

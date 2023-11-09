@@ -33,7 +33,9 @@ public class ObjectPoolManager : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             redPoolingMinionAttackQueue.Enqueue(CreateNewObject("Red",this.transform.position));
+            //레드팀 미니언 공격 이펙트전용 큐
             bluePoolingMinionAttackQueue.Enqueue(CreateNewObject("Blue", this.transform.position));
+            //블루팀 미니언 공격 이펙트전용 큐
         }
     }
 
@@ -74,7 +76,7 @@ public class ObjectPoolManager : MonoBehaviour
     public static void ReturnObject(MinionWizard_Attack obj,string team)
     {
         obj.Show(false);
-        obj.SetParent(true);
+        obj.SetParent(true); // 비활성화 후 오브젝트 풀 오브젝트 자식화
         if(team == "Red")
         {
             Instance.redPoolingMinionAttackQueue.Enqueue(obj);
