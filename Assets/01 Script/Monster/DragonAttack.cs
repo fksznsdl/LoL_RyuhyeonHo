@@ -12,10 +12,15 @@ public class DragonAttack : Attack
     {
         base.Start();
         if (!pv.IsMine)
+        {
             this.enabled = false;
-        target = dragon.GetComponent<Dragon_AI>().target;
-        targetPos = target.transform.position;
-        currentTime = 0f;
+        }
+        else
+        {
+            target = dragon.GetComponent<Dragon_AI>().target;
+            targetPos = target.transform.position;
+            currentTime = 0f;
+        }
     }
     protected override void Update()
     {

@@ -241,7 +241,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
             goldTime = 0f;
             currentGold += 1.5f;
         }
-        if (isChampAttack)
+        if (isChampAttack || isbeHit)
         {
             champAttackReset();
         }
@@ -349,9 +349,12 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
         champAttackResetTime += Time.deltaTime;
         if (champAttackResetTime >= 0.5f)
         {
+            isbeHit = false;
             isChampAttack = false;
             champAttackResetTime = 0f;
+            beHitTarget = null;
         }
+        
     }
     public void Respawn()
     {
@@ -361,7 +364,6 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
     public void PRespawn()
     {
         this.GetComponent<NavMeshAgent>().enabled = false;
-        this.GetComponent<Controller>().enabled = true;
         if (team == 2)
         {
             this.transform.position = new Vector3(5f, 0f, 5f);
@@ -791,7 +793,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
         {
             if (pv.IsMine)
             {
-                yield return new WaitForSeconds(0.8f);
+                yield return new WaitForSeconds(1f);
                 PhotonNetwork.Destroy(this.gameObject);
             }
         }
@@ -807,13 +809,14 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
     [PunRPC]
     public void PDead()
     {
+        if (!isDead)
+        {
             isDead = true;
             this.transform.position = new Vector3(chTransform.position.x, chTransform.position.y, chTransform.position.z);
             StartCoroutine(DeadCoroutine());
             if (this.transform.tag == "Champion")
             {
                 GetComponent<Controller>().MoveCancel();
-                GetComponent<Controller>().enabled = false;
                 if (pv.IsMine)
                 {
                     status_UI = GameObject.Find("PlayerCanvas").transform.Find("Status_UI").GetComponent<Status_UI>();
@@ -825,6 +828,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
                 GameObject.Find("InGameManager").GetComponent<InGameManager>().CompleteGame(team);
             }
             currentTime = 0f;
+        }
     }
     private void Look(Vector3 _target)
     {
@@ -943,7 +947,6 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
             stream.SendNext(maxMp);
             stream.SendNext(attackDamage);
             stream.SendNext(currentMoveSpeed);
-            stream.SendNext(isDead);
         }
         else { 
             team = (int)stream.ReceiveNext();
@@ -954,7 +957,6 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
             maxMp = (float)stream.ReceiveNext();
             attackDamage = (float)stream.ReceiveNext();
             currentMoveSpeed = (float)stream.ReceiveNext();
-            isDead = (bool)stream.ReceiveNext();
         }
     }
 }

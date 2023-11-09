@@ -19,6 +19,7 @@ public class JannaR_KnockBackZone : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        pv = GetComponentInParent<PhotonView>();
         if (pv.IsMine)
         {
             if (other.transform.tag == "Minion" || other.transform.tag == "Champion" || other.transform.tag == "Monster")

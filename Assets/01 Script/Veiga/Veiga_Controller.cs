@@ -45,76 +45,79 @@ public class Veiga_Controller : Controller
     }
     protected override void Update()
     {
-        
-        base.Update();
-        if (pv.IsMine)
+        if (!status.isDead)
         {
-            if (isNotReachRange)
+            base.Update();
+
+            if (pv.IsMine)
             {
-                if (Input.GetMouseButtonUp(1))
+                if (isNotReachRange)
                 {
-                    isNotReachRange = false;
-                    MoveCancel();
-                }
-                if (Vector3.Distance(HitInfo.point, chTransform.position) <= VeigaWRange && currentSkil == (int)CurretSkil.W)
-                {
-                    isNotReachRange = false;
-                    StartCoroutine(SkilWCoroutine());
-                }
-                else if (Vector3.Distance(HitInfo.point, chTransform.position) <= VeigaERange && currentSkil == (int)CurretSkil.E)
-                {
-                    isNotReachRange = false;
-                    StartCoroutine(SkilECouroutine());
-                }
-                else if (Vector3.Distance(HitInfo.point, chTransform.position) <= VeigaR_Range && currentSkil == (int)CurretSkil.R)
-                {
-                    isNotReachRange = false;
-                    StartCoroutine(SkilRCouroutine());
-                }
-            }
-            if (isShowRange)
-            {
-                if (Input.GetMouseButtonUp(0))
-                {
-                    switch (currentSkil)
+                    if (Input.GetMouseButtonUp(1))
                     {
-                        case (int)CurretSkil.Q:
-                            isShowRange = false;
-                            nonTargetRange.gameObject.SetActive(false);
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            StartCoroutine(SkilQCouroutine());
-                            break;
-                        case (int)CurretSkil.W:
-                            isShowRange = false;
-                            nonTargetCircleRange.gameObject.SetActive(false);
-                            onMouseCircleRange.gameObject.SetActive(false);
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            StartCoroutine(SkilWCoroutine());
-                            break;
-                        case (int)CurretSkil.E:
-                            isShowRange = false;
-                            nonTargetCircleRange.gameObject.SetActive(false);
-                            onMouseCircleRange.gameObject.SetActive(false);
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            StartCoroutine(SkilECouroutine());
-                            break;
-                        case (int)CurretSkil.R:
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            if (Vector3.Distance(chTransform.position, HitInfo.point) <= VeigaR_Range)
-                            {
-                                if (HitInfo.transform.tag == "Champion")
+                        isNotReachRange = false;
+                        MoveCancel();
+                    }
+                    if (Vector3.Distance(HitInfo.point, chTransform.position) <= VeigaWRange && currentSkil == (int)CurretSkil.W)
+                    {
+                        isNotReachRange = false;
+                        StartCoroutine(SkilWCoroutine());
+                    }
+                    else if (Vector3.Distance(HitInfo.point, chTransform.position) <= VeigaERange && currentSkil == (int)CurretSkil.E)
+                    {
+                        isNotReachRange = false;
+                        StartCoroutine(SkilECouroutine());
+                    }
+                    else if (Vector3.Distance(HitInfo.point, chTransform.position) <= VeigaR_Range && currentSkil == (int)CurretSkil.R)
+                    {
+                        isNotReachRange = false;
+                        StartCoroutine(SkilRCouroutine());
+                    }
+                }
+                if (isShowRange)
+                {
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        switch (currentSkil)
+                        {
+                            case (int)CurretSkil.Q:
+                                isShowRange = false;
+                                nonTargetRange.gameObject.SetActive(false);
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                StartCoroutine(SkilQCouroutine());
+                                break;
+                            case (int)CurretSkil.W:
+                                isShowRange = false;
+                                nonTargetCircleRange.gameObject.SetActive(false);
+                                onMouseCircleRange.gameObject.SetActive(false);
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                StartCoroutine(SkilWCoroutine());
+                                break;
+                            case (int)CurretSkil.E:
+                                isShowRange = false;
+                                nonTargetCircleRange.gameObject.SetActive(false);
+                                onMouseCircleRange.gameObject.SetActive(false);
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                StartCoroutine(SkilECouroutine());
+                                break;
+                            case (int)CurretSkil.R:
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                if (Vector3.Distance(chTransform.position, HitInfo.point) <= VeigaR_Range)
                                 {
-                                    if (status.team != HitInfo.transform.GetComponent<Status>().team)
+                                    if (HitInfo.transform.tag == "Champion")
                                     {
-                                        isShowRange = false;
-                                        targetCircleRange.gameObject.SetActive(false);
-                                        StartCoroutine(SkilRCouroutine());
+                                        if (status.team != HitInfo.transform.GetComponent<Status>().team)
+                                        {
+                                            isShowRange = false;
+                                            targetCircleRange.gameObject.SetActive(false);
+                                            StartCoroutine(SkilRCouroutine());
+                                        }
                                     }
                                 }
-                            }
-                            break;
-                    }
+                                break;
+                        }
 
+                    }
                 }
             }
         }

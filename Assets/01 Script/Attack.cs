@@ -24,7 +24,7 @@ public abstract class Attack : MonoBehaviour
         if (pv.IsMine)
         {
             Status _status = hitInfo.transform.GetComponent<Status>();
-            if (_status != null && _status.isDead)
+            if (_status != null && _status.currentHp<=0f)
             {
                 PhotonNetwork.Destroy(this.gameObject);
                 return;

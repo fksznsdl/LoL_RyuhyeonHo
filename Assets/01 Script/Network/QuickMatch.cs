@@ -80,6 +80,6 @@ public class QuickMatch : MatchManager
     }
     public void UpdateCurrentPlayerText()
     {
-        currentPlayerCount_text.text = string.Format(currentPlayerCount_text.text, currentPlayerCount, MaxPlayers);
+        currentPlayerCount_text.text = string.Format($"현재 사용자 : {1} /  {2}", currentPlayerCount, MaxPlayers);
     }
 }

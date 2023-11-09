@@ -20,6 +20,11 @@ public class Anivia_Attack : Attack
             spelldamage = 0f;
             status = Anivia.GetComponent<Status>();
         }
+        else
+        {
+            this.enabled = false;
+            return;
+        }
     }
 
     protected override void Move()

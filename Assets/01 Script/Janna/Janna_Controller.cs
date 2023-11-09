@@ -40,79 +40,83 @@ public class Janna_Controller : Controller
     }
     protected override void Update()
     {
-        base.Update();
-        if (pv.IsMine)
+        if (!status.isDead)
         {
-            if (currentSkil == (int)CurretSkil.R)
+
+            base.Update();
+            if (pv.IsMine)
             {
-                if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+                if (currentSkil == (int)CurretSkil.R)
                 {
-                    StopCoroutine(SkilRCouroutine());
-                    anim.SetBool("Spell4", false);
-                    isAttack = false;
-                    isSkillAttack = false;
-                    currentSkil = (int)CurretSkil.NONE;
-                }
-            }
-            if (isNotReachRange)
-            {
-                if (Input.GetMouseButtonUp(1))
-                {
-                    isNotReachRange = false;
-                    MoveCancel();
-                }
-                if (Vector3.Distance(HitInfo.point, chTransform.position) <= JannaWRange && currentSkil == (int)CurretSkil.W)
-                {
-                    isNotReachRange = false;
-                    StartCoroutine(SkilWCoroutine());
-                }
-                else if (Vector3.Distance(HitInfo.point, chTransform.position) <= JannaERange && currentSkil == (int)CurretSkil.E)
-                {
-                    isNotReachRange = false;
-                    StartCoroutine(SkilECouroutine());
-                }
-            }
-            if (isShowRange)
-            {
-                if (Input.GetMouseButtonUp(0))
-                {
-                    switch (currentSkil)
+                    if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
                     {
-                        case (int)CurretSkil.Q:
-                            isShowRange = false;
-                            nonTargetRange.gameObject.SetActive(false);
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            StartCoroutine(SkilQCouroutine());
-                            break;
-                        case (int)CurretSkil.W:
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-
-                            if (HitInfo.transform.tag == "Champion" || HitInfo.transform.tag == "Minion" || HitInfo.transform.tag == "Monster")
-                            {
-                                if (status.team != HitInfo.transform.GetComponent<Status>().team)
-                                {
-                                    isShowRange = false;
-                                    targetCircleRange.SetActive(false);
-                                    StartCoroutine(SkilWCoroutine());
-                                }
-                            }
-                            break;
-                        case (int)CurretSkil.E:
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-
-                            if (HitInfo.transform.tag == "Champion" || HitInfo.transform.tag == "Building")
-                            {
-                                if (status.team == HitInfo.transform.GetComponent<Status>().team)
-                                {
-                                    isShowRange = false;
-                                    targetCircleRange.SetActive(false);
-                                    StartCoroutine(SkilECouroutine());
-                                }
-                            }
-
-                            break;
+                        StopCoroutine(SkilRCouroutine());
+                        anim.SetBool("Spell4", false);
+                        isAttack = false;
+                        isSkillAttack = false;
+                        currentSkil = (int)CurretSkil.NONE;
                     }
+                }
+                if (isNotReachRange)
+                {
+                    if (Input.GetMouseButtonUp(1))
+                    {
+                        isNotReachRange = false;
+                        MoveCancel();
+                    }
+                    if (Vector3.Distance(HitInfo.point, chTransform.position) <= JannaWRange && currentSkil == (int)CurretSkil.W)
+                    {
+                        isNotReachRange = false;
+                        StartCoroutine(SkilWCoroutine());
+                    }
+                    else if (Vector3.Distance(HitInfo.point, chTransform.position) <= JannaERange && currentSkil == (int)CurretSkil.E)
+                    {
+                        isNotReachRange = false;
+                        StartCoroutine(SkilECouroutine());
+                    }
+                }
+                if (isShowRange)
+                {
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        switch (currentSkil)
+                        {
+                            case (int)CurretSkil.Q:
+                                isShowRange = false;
+                                nonTargetRange.gameObject.SetActive(false);
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                StartCoroutine(SkilQCouroutine());
+                                break;
+                            case (int)CurretSkil.W:
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
 
+                                if (HitInfo.transform.tag == "Champion" || HitInfo.transform.tag == "Minion" || HitInfo.transform.tag == "Monster")
+                                {
+                                    if (status.team != HitInfo.transform.GetComponent<Status>().team)
+                                    {
+                                        isShowRange = false;
+                                        targetCircleRange.SetActive(false);
+                                        StartCoroutine(SkilWCoroutine());
+                                    }
+                                }
+                                break;
+                            case (int)CurretSkil.E:
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+
+                                if (HitInfo.transform.tag == "Champion" || HitInfo.transform.tag == "Building")
+                                {
+                                    if (status.team == HitInfo.transform.GetComponent<Status>().team)
+                                    {
+                                        isShowRange = false;
+                                        targetCircleRange.SetActive(false);
+                                        StartCoroutine(SkilECouroutine());
+                                    }
+                                }
+
+                                break;
+                        }
+
+                    }
                 }
             }
         }

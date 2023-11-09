@@ -104,6 +104,11 @@ public abstract class Controller : MonoBehaviour
         UpdateCoolTime();
         if (pv.IsMine)
         {
+            if (status.isCC || status.isAirborne)
+            {
+                MoveCancel();
+                return;
+            }
             if (Input.GetKeyDown(KeyCode.S) && isAttack && !isSkillAttack)
             {
                 StopAllCoroutines();
@@ -223,7 +228,7 @@ public abstract class Controller : MonoBehaviour
                     RightClick();
                 }
             }
-            else if(isAttack)
+            else if(isAttack && !isSkillAttack)
             {
                 if (Input.GetMouseButtonDown(1)) {
                     if (Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out info)){

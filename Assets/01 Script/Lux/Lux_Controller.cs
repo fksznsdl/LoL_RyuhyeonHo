@@ -49,55 +49,58 @@ public class Lux_Controller : Controller
     }
     protected override void Update()
     {
-        base.Update();
-        if (pv.IsMine)
+        if (!status.isDead)
         {
-            if (isNotReachRange)
+            base.Update();
+            if (pv.IsMine)
             {
-                if (Input.GetMouseButtonUp(1))
+                if (isNotReachRange)
                 {
-                    isNotReachRange = false;
-                    MoveCancel();
-                }
-                else if (Vector3.Distance(HitInfo.point, chTransform.position) <= LuxERange && currentSkil == (int)CurretSkil.E)
-                {
-                    isNotReachRange = false;
-                    StartCoroutine(SkilECouroutine());
-                }
-            }
-            if (isShowRange)
-            {
-                if (Input.GetMouseButtonUp(0))
-                {
-                    switch (currentSkil)
+                    if (Input.GetMouseButtonUp(1))
                     {
-                        case (int)CurretSkil.Q:
-                            isShowRange = false;
-                            nonTargetRange.gameObject.SetActive(false);
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            StartCoroutine(SkilQCouroutine());
-                            break;
-                        case (int)CurretSkil.W:
-                            isShowRange = false;
-                            nonTargetRange.gameObject.SetActive(false);
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            StartCoroutine(SkilWCoroutine());
-                            break;
-                        case (int)CurretSkil.E:
-                            isShowRange = false;
-                            nonTargetCircleRange.gameObject.SetActive(false);
-                            onMouseCircleRange.gameObject.SetActive(false);
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            StartCoroutine(SkilECouroutine());
-                            break;
-                        case (int)CurretSkil.R:
-                            isShowRange = false;
-                            nonTargetRange.gameObject.SetActive(false);
-                            Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
-                            StartCoroutine(SkilRCouroutine());
-                            break;
+                        isNotReachRange = false;
+                        MoveCancel();
                     }
+                    else if (Vector3.Distance(HitInfo.point, chTransform.position) <= LuxERange && currentSkil == (int)CurretSkil.E)
+                    {
+                        isNotReachRange = false;
+                        StartCoroutine(SkilECouroutine());
+                    }
+                }
+                if (isShowRange)
+                {
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        switch (currentSkil)
+                        {
+                            case (int)CurretSkil.Q:
+                                isShowRange = false;
+                                nonTargetRange.gameObject.SetActive(false);
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                StartCoroutine(SkilQCouroutine());
+                                break;
+                            case (int)CurretSkil.W:
+                                isShowRange = false;
+                                nonTargetRange.gameObject.SetActive(false);
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                StartCoroutine(SkilWCoroutine());
+                                break;
+                            case (int)CurretSkil.E:
+                                isShowRange = false;
+                                nonTargetCircleRange.gameObject.SetActive(false);
+                                onMouseCircleRange.gameObject.SetActive(false);
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                StartCoroutine(SkilECouroutine());
+                                break;
+                            case (int)CurretSkil.R:
+                                isShowRange = false;
+                                nonTargetRange.gameObject.SetActive(false);
+                                Physics.Raycast(playerCamera.ScreenPointToRay(Input.mousePosition), out HitInfo);
+                                StartCoroutine(SkilRCouroutine());
+                                break;
+                        }
 
+                    }
                 }
             }
         }

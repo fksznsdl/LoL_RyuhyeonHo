@@ -9,19 +9,15 @@ public class DragonKnockBack : MonoBehaviour
     private PhotonView pv;
     private void OnEnable()
     {
-        pv = GetComponentInParent<PhotonView>();
         force = 10f;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (pv.IsMine)
-        {
             if (other.transform.tag == "Champion")
             {
                 other.GetComponent<Status>().RPCKnockBack(force - Vector3.Distance(this.transform.position, other.transform.position), this.transform.position);
             }
-        }
     }
 
 

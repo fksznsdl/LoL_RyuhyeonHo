@@ -72,17 +72,17 @@ public class Dragon_AI : Monster_AI
                     return;
                 }
             }
-            else if (status.isbeHit)
+            else if (status.isbeHit && !isFly)
             {
                 target = status.beHitTarget;
                 status.isbeHit = false;
                 status.beHitTarget = null;
                 StartCoroutine(FlyCoroutine());
             }
-            else if (!isOriginPos)
+            else if (!isOriginPos && isFly)
             {
                 distance = Vector3.Distance(this.transform.position, originPos);
-                if (distance <= 0.5f)
+                if (distance <= 1f)
                 {
                     isOriginPos = true;
                     MoveCancel();
