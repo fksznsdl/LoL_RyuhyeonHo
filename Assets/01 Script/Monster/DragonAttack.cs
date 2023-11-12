@@ -34,6 +34,7 @@ public class DragonAttack : Attack
     }
     protected override void Move()
     {
+        targetPos = target.transform.position;
         this.transform.position = Vector3.Lerp(orginPos, targetPos, currentTime);
         if (Vector3.Distance(this.transform.position, targetPos) <= 1f)
         {

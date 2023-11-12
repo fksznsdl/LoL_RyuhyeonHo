@@ -1,6 +1,7 @@
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -40,6 +41,7 @@ public class Monster_AI : MonoBehaviour
         status = GetComponent<Status>();
         nav_agent = GetComponent<NavMeshAgent>();
         nav_agent.acceleration = 1000f;
+        nav_agent.updateRotation = false;
         isAttack = false;
         target = null;
         originPos = this.transform.position;
@@ -73,7 +75,7 @@ public class Monster_AI : MonoBehaviour
         {
             IsDead();
         }
-        if(!isAttack && !status.isCC && !status.isAirborne){
+        else if(!isAttack && !status.isCC && !status.isAirborne && !status.isDead){
             if(target != null)
             {
                 aggroTime += Time.deltaTime;
@@ -169,7 +171,7 @@ public class Monster_AI : MonoBehaviour
     }
     protected  void Look(Vector3 point)
     {
-        chTransform.forward = point - chTransform.position;
+        chTransform.forward = new Vector3(point.x - chTransform.position.x, chTransform.position.y, point.z - chTransform.position.z);
     }
     protected void RemoveTarget()
     {

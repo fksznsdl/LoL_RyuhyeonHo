@@ -29,6 +29,8 @@ public class PickWindowManager : MonoBehaviour,IOnEventCallback
     private string champPick;
     private string redPickName;
     private string bluePickName;
+
+    private readonly string RED = "Red", BLUE = "Blue";
     public void OnEvent(EventData photonEvent)
     {
         if(photonEvent.Code == (byte)EventCodeValues.EventCode.BLUE_TURN)
@@ -53,12 +55,12 @@ public class PickWindowManager : MonoBehaviour,IOnEventCallback
         else if(photonEvent.Code == (byte)EventCodeValues.EventCode.PICK_CHANGE)
         {
             string name = (string)((ExitGames.Client.Photon.Hashtable)photonEvent.CustomData)["ChampName"];
-            if(currentTurn == "Blue")
+            if(currentTurn == BLUE)
             {
                 bluePickName = name;
                 ps.blueChampPick = name;
             }
-            else if(currentTurn== "Red")
+            else if(currentTurn== RED)
             {
                 redPickName = name;
                 ps.redChampPick = name;

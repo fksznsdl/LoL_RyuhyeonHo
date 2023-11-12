@@ -18,6 +18,7 @@ public class ObjectPoolManager : MonoBehaviour
     Queue<MinionWizard_Attack> redPoolingMinionAttackQueue = new Queue<MinionWizard_Attack>();
     Queue<MinionWizard_Attack> bluePoolingMinionAttackQueue = new Queue<MinionWizard_Attack>();
 
+    private readonly string RED = "Red", BLUE = "Blue";
     private void Awake()
     {
         Instance = this;
@@ -32,16 +33,16 @@ public class ObjectPoolManager : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            redPoolingMinionAttackQueue.Enqueue(CreateNewObject("Red",this.transform.position));
+            redPoolingMinionAttackQueue.Enqueue(CreateNewObject(RED, this.transform.position));
             //레드팀 미니언 공격 이펙트전용 큐
-            bluePoolingMinionAttackQueue.Enqueue(CreateNewObject("Blue", this.transform.position));
+            bluePoolingMinionAttackQueue.Enqueue(CreateNewObject(BLUE, this.transform.position));
             //블루팀 미니언 공격 이펙트전용 큐
         }
     }
 
     public static MinionWizard_Attack GetObject(string team)
     {
-        if(team == "Red")
+        if(team == Instance.RED)
         {
             if (Instance.redPoolingMinionAttackQueue.Count > 0)
             {
@@ -51,7 +52,7 @@ public class ObjectPoolManager : MonoBehaviour
             }
             else
             {
-                var newObj = Instance.CreateNewObject("Red", new Vector3(0,0,0));
+                var newObj = Instance.CreateNewObject(Instance.RED, new Vector3(0,0,0));
                 newObj.GetComponent<MinionWizard_Attack>().SetParent(false);
                 return newObj;
             }
@@ -66,7 +67,7 @@ public class ObjectPoolManager : MonoBehaviour
             }
             else
             {
-                var newObj = Instance.CreateNewObject("Blue", new Vector3(0, 0, 0));
+                var newObj = Instance.CreateNewObject(Instance.BLUE, new Vector3(0, 0, 0));
                 newObj.GetComponent<MinionWizard_Attack>().SetParent(false);
                 return newObj;
             }
@@ -77,11 +78,11 @@ public class ObjectPoolManager : MonoBehaviour
     {
         obj.Show(false);
         obj.SetParent(true); // 비활성화 후 오브젝트 풀 오브젝트 자식화
-        if(team == "Red")
+        if(team == Instance.RED)
         {
             Instance.redPoolingMinionAttackQueue.Enqueue(obj);
         }
-        else if(team == "Blue")
+        else if(team == Instance.BLUE)
         {
             Instance.bluePoolingMinionAttackQueue.Enqueue(obj);
         }

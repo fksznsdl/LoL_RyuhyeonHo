@@ -12,6 +12,11 @@ public class PlayerSetting : MonoBehaviourPunCallbacks,IConnectionCallbacks
 
     public string blueChampPick;
     public string redChampPick;
+
+    private readonly string RED = "Red", BLUE = "Blue";
+
+    private readonly string RoomName = "A";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,14 +34,14 @@ public class PlayerSetting : MonoBehaviourPunCallbacks,IConnectionCallbacks
     private IEnumerator StayCoroutine()
     {
         yield return new WaitForSeconds(5f);
-        if(team == "Blue")
+        if(team == RED)
         {
-            PhotonNetwork.CreateRoom("A", new RoomOptions { MaxPlayers = 2 }); // 规 积己
+            PhotonNetwork.CreateRoom(RoomName, new RoomOptions { MaxPlayers = 2 }); // 规 积己
         }
         else
         {
             yield return new WaitForSeconds(5f);
-            PhotonNetwork.JoinRoom("A"); // 规 立加
+            PhotonNetwork.JoinRoom(RoomName); // 规 立加
         }
     }
     public override void OnDisable()
@@ -47,7 +52,7 @@ public class PlayerSetting : MonoBehaviourPunCallbacks,IConnectionCallbacks
     }
     public void PlayerSpawn()
     {
-        if (team == "Blue")
+        if (team == BLUE)
         {
             var clone = PhotonNetwork.Instantiate(champName, PlayerPos(), Quaternion.identity);
             clone.name = champName;
@@ -61,11 +66,11 @@ public class PlayerSetting : MonoBehaviourPunCallbacks,IConnectionCallbacks
     public Vector3 PlayerPos()
     {
         Vector3 pos = new Vector3();
-        if (team == "Blue")
+        if (team == BLUE)
         {
             pos = new Vector3(5f, 0f, 5f);
         }
-        else if(team == "Red")
+        else if(team == RED)
         {
             pos = new Vector3(205f, 0f, 205f);
         }

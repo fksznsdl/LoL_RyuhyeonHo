@@ -652,6 +652,7 @@ public class Status : MonoBehaviourPunCallbacks ,IPunObservable
         isDebuff = false;
         isHitAniviaQR = false;
         isCC = false;
+        ResetSlow();
         currentslowTime = 0f;
         currentCCTime = 0f;
         debuffs.Clear();

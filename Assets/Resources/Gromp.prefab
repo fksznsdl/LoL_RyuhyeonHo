@@ -108,7 +108,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &7636556641007528372
 MonoBehaviour:
@@ -221,6 +221,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 7636556641007528372}
   - {fileID: 3250721003436252989}
+  - {fileID: 4015089570290666207}
+  - {fileID: 334347590375219885}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

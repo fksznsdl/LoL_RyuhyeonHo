@@ -47,6 +47,7 @@ public class Minion_AI : MonoBehaviour
         {
             status = GetComponent<Status>();
             nav_agent.acceleration = 1000f;
+            nav_agent.updateRotation = false;
             sightRange /= 60f;
             currentAttackCoolTime = 0f;
             isAttack = false;
@@ -222,6 +223,7 @@ public class Minion_AI : MonoBehaviour
     }
     private void SearchTarget()
     {
+        sightObject.gameObject.SetActive(false);
         sightObject.gameObject.SetActive(true);
     }
 

@@ -25,6 +25,7 @@ public class Dragon_AI : Monster_AI
             status = GetComponent<Status>();
             nav_agent = GetComponent<NavMeshAgent>();
             nav_agent.acceleration = 1000f;
+            nav_agent.updateRotation = false;
             isAttack = false;
             target = null;
             originPos = this.transform.position;
@@ -43,7 +44,7 @@ public class Dragon_AI : Monster_AI
         {
             IsDead();
         }
-        if (!isAttack)
+        else if (!isAttack)
         {
             status.ResetSlow();
             if (target != null && isFly)
